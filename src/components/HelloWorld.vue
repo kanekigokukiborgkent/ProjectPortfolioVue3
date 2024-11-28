@@ -1,18 +1,33 @@
 <template>
-  <div class="">
-
+  <div class="FonSite">
+    <div class="PrimeBlock">
+      <PrimeBlock />
+      <SecondBlock />
+    </div>
   </div>
 </template>
 
 <script>
+import PrimeBlock from "@/Blocks/PrimeBlock.vue";
+import SecondBlock from "@/Blocks/SecondBlock.vue";
 export default {
-  props: {
+  components: {
+    PrimeBlock,
+    SecondBlock,
   },
+  props: {},
   method: {},
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.FonSite {
+  display: flex;
+  justify-content: center;
+}
+.PrimeBlock {
+  width: 1080px;
+  height: 200px;
+  background-color: aqua;
+}
 </style>
