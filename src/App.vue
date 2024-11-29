@@ -13,10 +13,10 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   height: 100%;
   width: 100%;
-  background-color: aquamarine;
+  //background-color: aquamarine;
 }
 </style>

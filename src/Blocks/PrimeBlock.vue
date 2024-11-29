@@ -15,7 +15,7 @@
 export default {
   data() {
     return {
-      name: "SAVCIUC MAXIM,",
+      name: "SAVCIUC MAXIM",
       profession: "FRONTEND WEB DEVELOPER",
     };
   },

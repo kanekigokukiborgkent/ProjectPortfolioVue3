@@ -27,7 +27,5 @@ export default {
 }
 .PrimeBlock {
   width: 1080px;
-  height: 200px;
-  background-color: aqua;
 }
 </style>
