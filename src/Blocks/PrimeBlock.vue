@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 
 .primeClass {
@@ -32,18 +32,5 @@ export default {
   flex-direction: column;
   align-items: center;
   font-family: "Libre Baskerville", serif;
-}
-.nameClass {
-  //  font-weight: 1000;
-  // background: linear-gradient(
-  //  to right,
-  // rgba(33, 154, 169, 1) 0%,
-  // rgb(20, 181, 181) 35%,
-  //rgba(17, 173, 205, 1) 100%
-  //);
-  //-webkit-text-fill-color: transparent;
-  // -webkit-background-clip: text;
-}
-.profClass {
 }
 </style>

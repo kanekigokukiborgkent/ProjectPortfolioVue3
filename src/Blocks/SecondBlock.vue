@@ -1,28 +1,35 @@
 <template>
   <div class="primeClass mt-5">
     <p class="smallText">Get to know</p>
-    <p class="simpleText">About Me</p>
-    <v-container>
+    <div>
+      <p class="simpleText">About Me</p>
       <v-divider
         :thickness="10"
         class="border-opacity-100 dividerButtom"
-        inset
       ></v-divider>
-    </v-container>
+    </div>
     <div class="BlockOne">
       <v-img
-        :width="300"
+        class="BlockPhoto mr-5"
+        :width="250"
         aspect-ratio="16/9"
         cover
         src="../../public/SavciucMaxim.jpg"
       ></v-img>
 
-      <v-card>
-        <v-list :items="textAboutMeAll" />
-
-        <v-card-actions>
+      <v-card :width="600">
+        <v-list>
+          <v-list-item v-for="(item, index) in textAboutMeAll" :key="index">
+            <v-list-item-content>
+              <v-list-item-title class="smallText text-wrap">
+                {{ item }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+        <!-- <v-card-actions>
           <v-btn>Click me</v-btn>
-        </v-card-actions>
+        </v-card-actions> -->
       </v-card>
     </div>
   </div>
@@ -45,24 +52,26 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .primeClass {
-  display: flex;
+  @include center;
   flex-direction: column;
-  align-items: center;
   font-family: "Libre Baskerville", serif;
 }
 .smallText {
-  font-size: 10px;
+  font-size: $font-size;
 }
 .simpleText {
   margin-top: -15px;
 }
 .dividerButtom {
   margin-top: -20px;
-  color: darkblue;
+  color: $primary-color;
 }
 .BlockOne {
   display: flex;
+}
+.BlockPhoto {
+  border-radius: 5%;
 }
 </style>

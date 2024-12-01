@@ -1,0 +1,8 @@
+$primary-color: darkblue;
+$font-size: 12px;
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
