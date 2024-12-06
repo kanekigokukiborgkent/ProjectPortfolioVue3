@@ -52,7 +52,6 @@ export default {
   methods: {
     getSkillsData() {
       this.allMySkills = getMySkillsData();
-      console.log("this.allMySkills", this.allMySkills);
     },
   },
 };

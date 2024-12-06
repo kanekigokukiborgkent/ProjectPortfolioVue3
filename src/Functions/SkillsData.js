@@ -76,3 +76,57 @@ export function getMySkillsData() {
 
   return tempArray;
 }
+
+export function getMyLanguages() {
+  let arraySkills = [
+    {
+      category: [
+        {
+          columnParent: "UNDERSTANDING",
+          columnChild: [
+            { subCategory: "Listening", level: "Mother tongue" },
+            { subCategory: "Reading", level: "Mother tongue" },
+          ],
+        },
+      ],
+    },
+    {
+      category: [
+        {
+          columnParent: "SPEAKING",
+          columnChild: [
+            { subCategory: "Spoken production", level: "Advanced" },
+            { subCategory: "Spoken interaction", level: "Intermediate" },
+          ],
+        },
+      ],
+    },
+    {
+      category: [
+        {
+          columnParent: "WRITING",
+          columnChild: [
+            { subCategory: " ", level: "Advanced" },
+          ],
+        },
+      ],
+    },
+  ];
+  let arrayLanguages = [
+    {
+      language: "ROMANIAN"
+    },
+    {
+      language: "ENGLISH"
+    },
+    {
+      language: "RUSSIAN"
+    },
+    {
+      language: "FRENCH"
+    },
+  ];
+  
+
+  return {arraySkills,arrayLanguages};
+}

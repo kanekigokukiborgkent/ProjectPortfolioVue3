@@ -4,6 +4,7 @@
       <PrimeBlock />
       <SecondBlock />
       <ThirdBlock />
+      <ForthBlock />
     </div>
   </div>
 </template>
@@ -12,12 +13,14 @@
 import PrimeBlock from "@/Blocks/PrimeBlock.vue";
 import SecondBlock from "@/Blocks/SecondBlock.vue";
 import ThirdBlock from "@/Blocks/ThirdBlock.vue";
+import ForthBlock from "@/Blocks/ForthBlock.vue";
 
 export default {
   components: {
     PrimeBlock,
     SecondBlock,
     ThirdBlock,
+    ForthBlock,
   },
   props: {},
   method: {},
