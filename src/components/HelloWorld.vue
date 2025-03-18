@@ -1,26 +1,30 @@
 <template>
   <div class="FonSite">
     <div class="PrimeBlock">
-      <PrimeBlock />
-      <SecondBlock />
+      <!-- <TestBlock /> -->
+      <!-- <PrimeBlock />
+      <SecondBlock /> -->
       <ThirdBlock />
-      <ForthBlock />
+      <!-- <ForthBlock /> -->
     </div>
   </div>
 </template>
 
 <script>
-import PrimeBlock from "@/Blocks/PrimeBlock.vue";
-import SecondBlock from "@/Blocks/SecondBlock.vue";
+// import TestBlock from "@/Blocks/TestBlock.vue";
+
+// import PrimeBlock from "@/Blocks/PrimeBlock.vue";
+// import SecondBlock from "@/Blocks/SecondBlock.vue";
+// import ForthBlock from "@/Blocks/ForthBlock.vue";
 import ThirdBlock from "@/Blocks/ThirdBlock.vue";
-import ForthBlock from "@/Blocks/ForthBlock.vue";
 
 export default {
   components: {
-    PrimeBlock,
-    SecondBlock,
+    // TestBlock,
+    // PrimeBlock,
+    // SecondBlock,
+    // ForthBlock,
     ThirdBlock,
-    ForthBlock,
   },
   props: {},
   method: {},
@@ -32,6 +36,6 @@ export default {
   @include center;
 }
 .PrimeBlock {
-  width: 1080px;
+  width: 100%;
 }
 </style>

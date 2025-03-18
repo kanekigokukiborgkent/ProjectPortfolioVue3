@@ -9,7 +9,7 @@
       ></v-divider>
     </div>
 
-    <v-container>
+    <!-- <v-container>
       <v-row>
         <v-col
           v-for="(item, index) in allMySkills"
@@ -34,17 +34,22 @@
           </v-card>
         </v-col>
       </v-row>
-    </v-container>
+    </v-container> -->
+    <TableComponent />
   </div>
 </template>
 
 <script>
 import { getMySkillsData } from "../Functions/SkillsData.js";
+import TableComponent from "@/Blocks/TableComponent.vue";
 export default {
   data() {
     return {
       allMySkills: [],
     };
+  },
+  components: {
+    TableComponent,
   },
   created() {
     this.getSkillsData();
