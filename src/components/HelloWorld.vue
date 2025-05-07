@@ -2,10 +2,10 @@
   <div class="FonSite">
     <div class="PrimeBlock">
       <!-- <TestBlock /> -->
-      <!-- <PrimeBlock />
-      <SecondBlock /> -->
+       <PrimeBlock />
+      <SecondBlock />
       <ThirdBlock />
-      <!-- <ForthBlock /> -->
+      <ForthBlock /> 
     </div>
   </div>
 </template>
@@ -13,18 +13,18 @@
 <script>
 // import TestBlock from "@/Blocks/TestBlock.vue";
 
-// import PrimeBlock from "@/Blocks/PrimeBlock.vue";
-// import SecondBlock from "@/Blocks/SecondBlock.vue";
-// import ForthBlock from "@/Blocks/ForthBlock.vue";
+import PrimeBlock from "@/Blocks/PrimeBlock.vue";
+import SecondBlock from "@/Blocks/SecondBlock.vue";
 import ThirdBlock from "@/Blocks/ThirdBlock.vue";
+import ForthBlock from "@/Blocks/ForthBlock.vue";
 
 export default {
   components: {
     // TestBlock,
-    // PrimeBlock,
-    // SecondBlock,
-    // ForthBlock,
+    PrimeBlock,
+    SecondBlock,
     ThirdBlock,
+    ForthBlock,
   },
   props: {},
   method: {},

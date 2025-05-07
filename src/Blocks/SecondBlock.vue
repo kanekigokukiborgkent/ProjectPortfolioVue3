@@ -14,17 +14,14 @@
         :width="250"
         aspect-ratio="16/9"
         cover
-        src="../../public/SavciucMaxim.jpg"
+        src="@/assets/imagesProject/SavciucMaxim.jpg"
       ></v-img>
-
       <v-card :width="600">
         <v-list>
           <v-list-item v-for="(item, index) in textAboutMeAll" :key="index">
-            <v-list-item-content>
-              <v-list-item-title class="smallText text-wrap">
-                {{ item }}
-              </v-list-item-title>
-            </v-list-item-content>
+            <v-list-item-title class="smallText text-wrap">
+              {{ item }}
+            </v-list-item-title>
           </v-list-item>
         </v-list>
         <!-- <v-card-actions>

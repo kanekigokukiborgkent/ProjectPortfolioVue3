@@ -1,5 +1,5 @@
 export function getMySkillsData() {
-  let tempArray = [
+  const tempArrayDefault = [
     {
       title: "HTML",
       description:
@@ -74,11 +74,13 @@ export function getMySkillsData() {
     },
   ];
 
+  const tempArray = JSON.parse(JSON.stringify(tempArrayDefault));
+
   return tempArray;
 }
 
 export function getMyLanguages() {
-  let arraySkills = [
+  const arraySkillsDefault = [
     {
       category: [
         {
@@ -105,28 +107,30 @@ export function getMyLanguages() {
       category: [
         {
           columnParent: "WRITING",
-          columnChild: [
-            { subCategory: " ", level: "Advanced" },
-          ],
+          columnChild: [{ subCategory: " ", level: "Advanced" }],
         },
       ],
     },
   ];
-  let arrayLanguages = [
+  const arrayLanguagesDefault = [
     {
-      language: "ROMANIAN"
+      language: "ROMANIAN",
     },
     {
-      language: "ENGLISH"
+      language: "ENGLISH",
     },
     {
-      language: "RUSSIAN"
+      language: "RUSSIAN",
     },
     {
-      language: "FRENCH"
+      language: "FRENCH",
     },
   ];
-  
+  const arraySkills = JSON.parse(JSON.stringify(arraySkillsDefault));
+  const arrayLanguages = JSON.parse(JSON.stringify(arrayLanguagesDefault));
 
-  return {arraySkills,arrayLanguages};
+  return {
+    arraySkills,
+    arrayLanguages,
+  };
 }

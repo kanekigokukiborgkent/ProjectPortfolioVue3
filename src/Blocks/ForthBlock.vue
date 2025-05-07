@@ -30,7 +30,7 @@
           </tr>
         </tbody>
       </v-table> -->
-    <template>
+    <!-- <template>
       <v-container>
         <v-data-table
           :headers="headers"
@@ -38,57 +38,139 @@
           item-value="id"
           class="elevation-1"
         >
-          <template v-slot:body="{ items }">
+           <template v-slot:body="{ items }">
             <tr v-for="item in items" :key="item.id">
               <td :colspan="item.isParent ? 2 : 1" class="text-left">
                 {{ item.isParent ? item.category : item.Action1 }}
               </td>
               <td v-if="!item.isParent">{{ item.Action2 }}</td>
             </tr>
-          </template>
+          </template> 
         </v-data-table>
       </v-container>
+    </template> -->
+
+    <template>
+      <v-data-table
+        :headers="headers"
+        :items="items"
+        item-key="name"
+        hide-default-footer
+      ></v-data-table>
     </template>
   </div>
 </template>
 
 <script>
 import { getMyLanguages } from "../Functions/SkillsData.js";
+// import callApiBack from "@/callFunctions/callApiBack.js";
+
 export default {
   data() {
     return {
       allMyLanguages: [],
-      headers: [],
-      items:[]
+      // headers: [],
+      // items: [],
+
+      headers: [
+        { title: "Pyramid", value: "name" },
+        { title: "Location", value: "location" },
+        { title: "Construction Date", value: "constructionDate" },
+        {
+          title: "Dimensions",
+          align: "center",
+          children: [
+            { title: "Height(m)", value: "height" },
+            { title: "Base(m)", value: "base" },
+            { title: "Volume(m³)", value: "volume" },
+          ],
+        },
+      ],
+      items: [
+        {
+          name: "Great Pyramid of Giza",
+          location: "Egypt",
+          height: "146.6",
+          base: "230.4",
+          volume: "2583285",
+          constructionDate: "c. 2580–2560 BC",
+        },
+        {
+          name: "Pyramid of Khafre",
+          location: "Egypt",
+          height: "136.4",
+          base: "215.3",
+          volume: "1477485",
+          constructionDate: "c. 2570 BC",
+        },
+        {
+          name: "Red Pyramid",
+          location: "Egypt",
+          height: "104",
+          base: "220",
+          volume: "1602895",
+          constructionDate: "c. 2590 BC",
+        },
+        {
+          name: "Bent Pyramid",
+          location: "Egypt",
+          height: "101.1",
+          base: "188.6",
+          volume: "1200690",
+          constructionDate: "c. 2600 BC",
+        },
+        {
+          name: "Pyramid of the Sun",
+          location: "Mexico",
+          height: "65",
+          base: "225",
+          volume: "1237097",
+          constructionDate: "c. 200 CE",
+        },
+      ],
     };
   },
-async  created() {
-  await  this.getLanguagesData();
+  async created() {
+    // this.callFunctionFromBack();
+    await this.getLanguagesData();
     this.getHeaders();
-    this.getSecondHeaders
+    this.getSecondHeaders;
   },
   methods: {
-    // arraySkills,arrayLanguages
     getLanguagesData() {
       this.allMyLanguages = getMyLanguages();
-      console.log(
-        "this.allMyLanguages",
-        JSON.parse(JSON.stringify(this.allMyLanguages))
-      );
+      console.log("this.allMyLanguages", this.allMyLanguages);
     },
     getHeaders() {
       this.allMyLanguages.arraySkills.forEach((element) => {
         this.headers.push(element.category[0].columnParent);
       });
-      console.log(JSON.parse(JSON.stringify(this.headers)));
+      console.log(this.headers);
     },
-    getItems(){
+    getItems() {
       this.allMyLanguages.arraySkills.forEach((element) => {
         this.items.push(element.category[0].columnChild);
       });
-      console.log(JSON.parse(JSON.stringify(this.items)));
-
+      console.log(this.items);
     },
+
+    //   async callFunctionFromBack() {
+    //     try {
+    //       // let apiData = {
+    //       //   username: "Maxim Savciuc",
+    //       // };
+    //       // let res = await fetch(
+    //       //   "http://localhost:7214/api/user/languageSkills/Maxim%20Savciuc"
+    //       // );
+    //       let res = await fetch(
+    //         "http://localhost:5080/api/user/languageSkills/Maxim%20Savciuc"
+    //       );
+
+    //       //await callApiBack.getDateFromRegistru(apiData);
+    //       console.log("res", res);
+    //     } catch (e) {
+    //       console.log("e", e);
+    //     }
   },
 };
 </script>
